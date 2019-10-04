@@ -1,0 +1,30 @@
+﻿<Window x:Class="Reproductor_Star_Wars_IX_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Reproductor_Star_Wars_IX_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <DockPanel>
+        <CheckBox x:Name="silenciar" Content="Silenciar" DockPanel.Dock="Bottom" Checked="Silenciar_Checked"/>
+
+        <DockPanel DockPanel.Dock="Right" Margin="5">
+            <StackPanel DockPanel.Dock="Top">
+                <Button x:Name="play" Margin="3" Click="Play_Click">Play</Button>
+                <Button x:Name="pausa" Margin="3" Click="Pausa_Click">Pause</Button>
+                <Button x:Name="stop" Margin="3" Click="Stop_Click">Stop</Button>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Bottom">
+                <RadioButton x:Name="trailer1" Margin="3" DockPanel.Dock="Right" Content="Trailer 1" Checked="Trailer1_Checked"/>
+                <RadioButton x:Name="trailer2" Margin="3" DockPanel.Dock="Right" Content="Trailer 2" Checked="Trailer2_Checked"/>
+            </StackPanel>
+        </DockPanel>
+
+        <Border BorderBrush="Black" BorderThickness="1" Margin="3">
+            <MediaElement x:Name="reproductor" LoadedBehavior="Manual"></MediaElement>
+        </Border>
+    </DockPanel>
+</Window>
